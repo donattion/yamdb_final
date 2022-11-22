@@ -73,12 +73,12 @@ jobs:
           with:
             push: true
             tags: donattion/yamdb_final:latest
-
-        -  name: Build and push
+        -name: Build and push
           uses: docker/build-push-action@v3
           with:
-            context: ./api_yamdb/
+            context: .
             push: true
+            tags: user/app:latest
 
   send_message:
     runs-on: ubuntu-latest
